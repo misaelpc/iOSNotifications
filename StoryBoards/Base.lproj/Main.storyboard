@@ -36,6 +36,9 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnR-DC-LiM">
                                         <rect key="frame" x="338" y="14" width="22" height="22"/>
+                                        <connections>
+                                            <action selector="sendButtonWasTouchedUpInsideSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v1k-SU-zEG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -58,14 +61,16 @@
                             <constraint firstItem="GVp-8J-0rj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KSM-sV-m31"/>
                             <constraint firstItem="nHt-gG-5pS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Zlt-sC-Pdo"/>
                             <constraint firstItem="nHt-gG-5pS" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dfc-OU-HQu"/>
-                            <constraint firstItem="GVp-8J-0rj" firstAttribute="top" secondItem="nHt-gG-5pS" secondAttribute="bottom" id="ggh-Xh-dIF"/>
                             <constraint firstItem="GVp-8J-0rj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hOm-Qq-wcP"/>
                             <constraint firstItem="nHt-gG-5pS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r93-H1-2uq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bottomSpace" destination="hOm-Qq-wcP" id="feD-22-HGo"/>
+                        <outlet property="messageInputTextField" destination="D34-gc-q8d" id="HPr-if-NiP"/>
                         <outlet property="tableView" destination="nHt-gG-5pS" id="Q8z-ea-66A"/>
+                        <outlet property="textContainerView" destination="GVp-8J-0rj" id="GNW-LI-AYx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
