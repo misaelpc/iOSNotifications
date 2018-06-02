@@ -14,6 +14,10 @@
 		0C14946C20C17DA8005BBE5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C14946A20C17DA8005BBE5F /* LaunchScreen.storyboard */; };
 		0C14947720C17DA8005BBE5F /* BunsanMessengerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C14947620C17DA8005BBE5F /* BunsanMessengerTests.swift */; };
 		0C14948220C17DA8005BBE5F /* BunsanMessengerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C14948120C17DA8005BBE5F /* BunsanMessengerUITests.swift */; };
+		0C14949420C18140005BBE5F /* MessagesStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C14949320C18140005BBE5F /* MessagesStore.swift */; };
+		0C14949620C184A3005BBE5F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C14949520C184A3005BBE5F /* Message.swift */; };
+		0C99177520C220E3005E89E9 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C99177420C220E3005E89E9 /* File.swift */; };
+		0C99177820C222ED005E89E9 /* messages.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C99177720C222ED005E89E9 /* messages.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		0C14947D20C17DA8005BBE5F /* BunsanMessengerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BunsanMessengerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C14948120C17DA8005BBE5F /* BunsanMessengerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BunsanMessengerUITests.swift; sourceTree = "<group>"; };
 		0C14948320C17DA8005BBE5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C14949320C18140005BBE5F /* MessagesStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesStore.swift; sourceTree = "<group>"; };
+		0C14949520C184A3005BBE5F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		0C99177420C220E3005E89E9 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		0C99177720C222ED005E89E9 /* messages.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = messages.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,12 @@
 		0C14945520C17DA5005BBE5F = {
 			isa = PBXGroup;
 			children = (
+				0C99177720C222ED005E89E9 /* messages.json */,
+				0C99177320C220C6005E89E9 /* Utils */,
+				0C14949220C180DA005BBE5F /* StoryBoards */,
+				0C14949120C18093005BBE5F /* Models */,
+				0C14949020C1808D005BBE5F /* Views */,
+				0C14948F20C18081005BBE5F /* Controllers */,
 				0C14946020C17DA5005BBE5F /* BunsanMessenger */,
 				0C14947520C17DA8005BBE5F /* BunsanMessengerTests */,
 				0C14948020C17DA8005BBE5F /* BunsanMessengerUITests */,
@@ -98,10 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				0C14946120C17DA5005BBE5F /* AppDelegate.swift */,
-				0C14946320C17DA5005BBE5F /* ViewController.swift */,
-				0C14946520C17DA5005BBE5F /* Main.storyboard */,
 				0C14946820C17DA8005BBE5F /* Assets.xcassets */,
-				0C14946A20C17DA8005BBE5F /* LaunchScreen.storyboard */,
 				0C14946D20C17DA8005BBE5F /* Info.plist */,
 			);
 			path = BunsanMessenger;
@@ -123,6 +134,47 @@
 				0C14948320C17DA8005BBE5F /* Info.plist */,
 			);
 			path = BunsanMessengerUITests;
+			sourceTree = "<group>";
+		};
+		0C14948F20C18081005BBE5F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C14946320C17DA5005BBE5F /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0C14949020C1808D005BBE5F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0C14949120C18093005BBE5F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0C14949320C18140005BBE5F /* MessagesStore.swift */,
+				0C14949520C184A3005BBE5F /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0C14949220C180DA005BBE5F /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				0C14946A20C17DA8005BBE5F /* LaunchScreen.storyboard */,
+				0C14946520C17DA5005BBE5F /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		0C99177320C220C6005E89E9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0C99177420C220E3005E89E9 /* File.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C14946C20C17DA8005BBE5F /* LaunchScreen.storyboard in Resources */,
+				0C99177820C222ED005E89E9 /* messages.json in Resources */,
 				0C14946920C17DA8005BBE5F /* Assets.xcassets in Resources */,
 				0C14946720C17DA5005BBE5F /* Main.storyboard in Resources */,
 			);
@@ -256,7 +309,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C99177520C220E3005E89E9 /* File.swift in Sources */,
 				0C14946420C17DA5005BBE5F /* ViewController.swift in Sources */,
+				0C14949620C184A3005BBE5F /* Message.swift in Sources */,
+				0C14949420C18140005BBE5F /* MessagesStore.swift in Sources */,
 				0C14946220C17DA5005BBE5F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
