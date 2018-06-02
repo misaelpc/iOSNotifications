@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     messagesStore.fetchMessagesFromJson()
     setupTableViewCell()
     setupKeyboardNotifications()
+    setupScrollNotifications()
     // Do any additional setup after loading the view, typically from a nib.
   }
   
@@ -34,6 +35,15 @@ class ViewController: UIViewController {
     
     NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
   }
+  
+  func setupScrollNotifications() {
+    NotificationCenter.default.addObserver(self, selector: #selector(handleScrollNotification), name: NSNotification.Name(rawValue: "com.bunsan.didScroll"), object: nil)
+  }
+  
+  @objc func handleScrollNotification(notification: NSNotification) {
+    messageInputTextField.resignFirstResponder()
+  }
+  
   
   @objc func handleKeyboardNotification(notification: NSNotification) {
     guard let userInfo = notification.userInfo else {return}
@@ -71,6 +81,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return UITableViewAutomaticDimension
+  }
+  
+  func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    NotificationCenter.default.post(name: Notification.Name(rawValue: "com.bunsan.didScroll"), object: self)
   }
   
 }
