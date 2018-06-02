@@ -18,6 +18,8 @@
 		0C14949620C184A3005BBE5F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C14949520C184A3005BBE5F /* Message.swift */; };
 		0C99177520C220E3005E89E9 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C99177420C220E3005E89E9 /* File.swift */; };
 		0C99177820C222ED005E89E9 /* messages.json in Resources */ = {isa = PBXBuildFile; fileRef = 0C99177720C222ED005E89E9 /* messages.json */; };
+		0C99177B20C231A4005E89E9 /* MessagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C99177920C231A4005E89E9 /* MessagesTableViewCell.swift */; };
+		0C99177C20C231A4005E89E9 /* MessagesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C99177A20C231A4005E89E9 /* MessagesTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		0C14949520C184A3005BBE5F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		0C99177420C220E3005E89E9 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		0C99177720C222ED005E89E9 /* messages.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = messages.json; sourceTree = "<group>"; };
+		0C99177920C231A4005E89E9 /* MessagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesTableViewCell.swift; sourceTree = "<group>"; };
+		0C99177A20C231A4005E89E9 /* MessagesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessagesTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,8 @@
 		0C14949020C1808D005BBE5F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0C99177920C231A4005E89E9 /* MessagesTableViewCell.swift */,
+				0C99177A20C231A4005E89E9 /* MessagesTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 				0C99177820C222ED005E89E9 /* messages.json in Resources */,
 				0C14946920C17DA8005BBE5F /* Assets.xcassets in Resources */,
 				0C14946720C17DA5005BBE5F /* Main.storyboard in Resources */,
+				0C99177C20C231A4005E89E9 /* MessagesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +317,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C99177520C220E3005E89E9 /* File.swift in Sources */,
+				0C99177B20C231A4005E89E9 /* MessagesTableViewCell.swift in Sources */,
 				0C14946420C17DA5005BBE5F /* ViewController.swift in Sources */,
 				0C14949620C184A3005BBE5F /* Message.swift in Sources */,
 				0C14949420C18140005BBE5F /* MessagesStore.swift in Sources */,
