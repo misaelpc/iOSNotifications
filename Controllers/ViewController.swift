@@ -22,6 +22,7 @@ class ViewController: UIViewController {
   func setupTableViewCell() {
     self.tableView.register(UINib(nibName: "MessagesTableViewCell",
                                   bundle: nil), forCellReuseIdentifier: "MessagesTableViewCell")
+    self.tableView.estimatedRowHeight = 80
   }
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -30,7 +31,7 @@ class ViewController: UIViewController {
 
 }
 
-extension ViewController: UITableViewDataSource {
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return messagesStore.messages.count
@@ -40,5 +41,10 @@ extension ViewController: UITableViewDataSource {
     let cell = tableView.dequeueReusableCell(withIdentifier: "MessagesTableViewCell", for: indexPath) as? MessagesTableViewCell
     return cell!
   }
+  
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return UITableViewAutomaticDimension
+  }
+  
 }
 
