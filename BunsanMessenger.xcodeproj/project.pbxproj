@@ -251,13 +251,16 @@
 				TargetAttributes = {
 					0C14945D20C17DA5005BBE5F = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 					};
 					0C14947120C17DA8005BBE5F = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						TestTargetID = 0C14945D20C17DA5005BBE5F;
 					};
 					0C14947C20C17DA8005BBE5F = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 1000;
 						TestTargetID = 0C14945D20C17DA5005BBE5F;
 					};
 				};
@@ -497,13 +500,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6U55YPQQ7X;
 				INFOPLIST_FILE = BunsanMessenger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bunsan.BunsanMessenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -515,13 +519,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6U55YPQQ7X;
 				INFOPLIST_FILE = BunsanMessenger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bunsan.BunsanMessenger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -541,7 +546,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bunsan.BunsanMessengerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BunsanMessenger.app/BunsanMessenger";
 			};
@@ -562,7 +567,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bunsan.BunsanMessengerTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BunsanMessenger.app/BunsanMessenger";
 			};
@@ -582,7 +587,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bunsan.BunsanMessengerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BunsanMessenger;
 			};
@@ -602,7 +607,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bunsan.BunsanMessengerUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = BunsanMessenger;
 			};

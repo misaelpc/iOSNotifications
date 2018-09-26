@@ -31,9 +31,9 @@ class ViewController: UIViewController {
   }
   
   func setupKeyboardNotifications() {
-    NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: UIResponder.keyboardWillShowNotification, object: nil)
     
-    NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    NotificationCenter.default.addObserver(self, selector: #selector(handleKeyboardNotification), name: UIResponder.keyboardWillHideNotification, object: nil)
   }
   
   func setupScrollNotifications() {
@@ -47,9 +47,9 @@ class ViewController: UIViewController {
   
   @objc func handleKeyboardNotification(notification: NSNotification) {
     guard let userInfo = notification.userInfo else {return}
-    let keyBoardFrame = (userInfo[UIKeyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
+    let keyBoardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as AnyObject).cgRectValue
     
-    if notification.name == NSNotification.Name.UIKeyboardWillShow {
+    if notification.name == UIResponder.keyboardWillShowNotification {
       bottomSpace.constant = -(keyBoardFrame?.height)! + 40
     } else {
       bottomSpace.constant = 0
@@ -75,17 +75,18 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let message = messagesStore.messages[indexPath.row]
     let cell = tableView.dequeueReusableCell(withIdentifier: "MessagesTableViewCell", for: indexPath) as? MessagesTableViewCell
+    cell?.textView.text = message.content
     return cell!
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return UITableViewAutomaticDimension
+    return UITableView.automaticDimension
   }
   
   func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
     NotificationCenter.default.post(name: Notification.Name(rawValue: "com.bunsan.didScroll"), object: self)
   }
-  
 }
 
